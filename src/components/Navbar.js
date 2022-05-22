@@ -28,6 +28,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
+    currentColor,
     activeMenu,
     setActiveMenu,
     isClicked,
@@ -61,14 +62,14 @@ const Navbar = () => {
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
         title="Menu"
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
       />
       <div className="flex">
         <NavButton
           title="Cart"
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
           customFunc={() => handleClick("cart")}
         />
@@ -76,7 +77,7 @@ const Navbar = () => {
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
           customFunc={() => handleClick("chat")}
         />
@@ -84,7 +85,7 @@ const Navbar = () => {
         <NavButton
           title="Notifications"
           dotColor="#03C9D7"
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
           customFunc={() => handleClick("notification")}
         />
