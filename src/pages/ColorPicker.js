@@ -1,5 +1,6 @@
 import React from "react";
 import { ColorPickerComponent } from "@syncfusion/ej2-react-inputs";
+
 import { Header } from "../components";
 
 const change = (args) => {
@@ -25,7 +26,7 @@ const ColorPicker = () => (
       <div id="preview" />
       <div className="flex justify-center items-center gap-20 flex-wrap">
         <div>
-          <p className="text-2xl font-semibold mt-2 mb-4">Inline Palette</p>
+          <p className="text-2xl font-semibold mt-2 mb-4">Inline Pallete</p>
           <CustomColorPicker id="inline-palette" mode="Palette" />
         </div>
         <div>
